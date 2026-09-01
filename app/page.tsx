@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Page() {
   return (
     <main
@@ -65,23 +67,26 @@ export default function Page() {
             gap: "14px",
           }}
         >
-          <button
+          <Link
+            href="/sign-up"
             style={{
+              display: "block",
               padding: "16px",
-              border: "none",
               borderRadius: "14px",
               background: "white",
               color: "#312e81",
               fontSize: "16px",
               fontWeight: 700,
-              cursor: "pointer",
+              textDecoration: "none",
             }}
           >
             Crear cuenta
-          </button>
+          </Link>
 
-          <button
+          <Link
+            href="/sign-in"
             style={{
+              display: "block",
               padding: "16px",
               border: "1px solid rgba(255,255,255,0.35)",
               borderRadius: "14px",
@@ -89,11 +94,11 @@ export default function Page() {
               color: "white",
               fontSize: "16px",
               fontWeight: 700,
-              cursor: "pointer",
+              textDecoration: "none",
             }}
           >
             Iniciar sesión
-          </button>
+          </Link>
         </div>
 
         <p
@@ -107,5 +112,5 @@ export default function Page() {
         </p>
       </div>
     </main>
-  );
+  )
 }
